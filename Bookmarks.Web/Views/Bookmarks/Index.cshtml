@@ -1,0 +1,9 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<Bookmarks.Web.ViewModels.BookmarkViewModel>
+
+<div class="row">
+    @Html.DisplayFor(x => x)
+</div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

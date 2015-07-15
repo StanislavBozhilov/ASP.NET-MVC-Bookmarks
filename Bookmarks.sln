@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.Data", "Bookmarks.Data\Bookmarks.Data.csproj", "{B4B20201-F90C-4B81-8D00-194B60191CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.Models", "Bookmarks.Models\Bookmarks.Models.csproj", "{7C3446B9-961E-4186-9F39-4A4D99249D55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.Web", "Bookmarks.Web\Bookmarks.Web.csproj", "{21160445-7212-4338-B6AE-A87ED2861333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.Common", "Bookmarks.Common\Bookmarks.Common.csproj", "{045A2AC0-0F08-4DB6-9E11-F117D6F2BA79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{072FF390-4E83-42FC-85C9-999A968E8921}"
+	ProjectSection(SolutionItems) = preProject
+		External Libraries\Kendo.Mvc.dll = External Libraries\Kendo.Mvc.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4B20201-F90C-4B81-8D00-194B60191CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B20201-F90C-4B81-8D00-194B60191CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B20201-F90C-4B81-8D00-194B60191CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B20201-F90C-4B81-8D00-194B60191CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3446B9-961E-4186-9F39-4A4D99249D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3446B9-961E-4186-9F39-4A4D99249D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3446B9-961E-4186-9F39-4A4D99249D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3446B9-961E-4186-9F39-4A4D99249D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21160445-7212-4338-B6AE-A87ED2861333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21160445-7212-4338-B6AE-A87ED2861333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21160445-7212-4338-B6AE-A87ED2861333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21160445-7212-4338-B6AE-A87ED2861333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045A2AC0-0F08-4DB6-9E11-F117D6F2BA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045A2AC0-0F08-4DB6-9E11-F117D6F2BA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045A2AC0-0F08-4DB6-9E11-F117D6F2BA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045A2AC0-0F08-4DB6-9E11-F117D6F2BA79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

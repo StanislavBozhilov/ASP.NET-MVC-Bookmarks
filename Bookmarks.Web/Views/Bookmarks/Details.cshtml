@@ -1,0 +1,56 @@
+﻿@model Bookmarks.Web.ViewModels.BookmarkDetailsViewModel
+
+<div>
+    <h1>@Html.DisplayFor(x => x.Title)</h1>
+    <p>@Html.DisplayNameFor(x => x.CategoryName): @Html.DisplayFor(x => x.CategoryName)</p>
+    <p>@Html.DisplayNameFor(x => x.Description): @Html.DisplayFor(x => x.Description)</p>
+    <p>
+        @Html.DisplayNameFor(x => x.Url): <a href="@Model.Url">@Model.Url</a>
+    </p>
+</div>
+<div class="clearfix">
+    <div class="pull-right">
+        Votes: <span id="votes">@(Model.VotesCount.HasValue ? Model.VotesCount : 0)</span>
+        @using (Ajax.BeginForm("Vote", new { id = Model.Id}, new AjaxOptions()
+        {
+            HttpMethod = "POST",
+            UpdateTargetId = "votes",
+            InsertionMode = InsertionMode.Replace
+        }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="submit" name="name" value="+" />
+        }
+    </div>
+</div>
+<div id="comments">
+    <h2>Comments</h2>
+    @if (Model.Comments.Any())
+    {
+        @Html.DisplayFor(x => x.Comments)
+    }
+    else
+    {
+        <p>No comments</p>
+    }
+</div>
+<div>
+    @using (Ajax.BeginForm("Add", "Comments", new {BookmarkId = Model.Id}, new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.InsertAfter,
+        UpdateTargetId = "comments",
+
+    }))
+    {
+        @Html.AntiForgeryToken()
+        <label for="Content">Content</label>
+        <input id="Content" type="text" name="Content" value=""/>
+
+        <input type="submit" name="submit" value="Add comment"/>
+    }
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

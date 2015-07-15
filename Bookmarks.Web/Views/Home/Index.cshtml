@@ -1,0 +1,18 @@
+﻿@model Bookmarks.Web.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Bookmarks</h1>
+</div>
+
+
+
+<div class="row">
+    @Html.DisplayFor(x => x.Bookmarks)
+</div>
+<div class="clearfix">
+    @Html.ActionLink("View all bookmarks...", "Index", "Bookmarks", null, new { @class = "btn btn-info pull-right" })
+</div>

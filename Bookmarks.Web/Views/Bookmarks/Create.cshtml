@@ -1,0 +1,46 @@
+﻿@model Bookmarks.Web.InputModels.BookmarkInputModel
+
+
+<div class="row">
+    <div class="col-md-8">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.LabelFor(m => m.Title, new {@class = "col-md-2 control-label"})
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Title, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.Title, "", new {@class = "text-danger"})
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Url, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Url, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Url, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Description, new {@class = "col-md-2 control-label"})
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Description, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.Description, "", new {@class = "text-danger"})
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CategoryId, new {@class = "col-md-2 control-label"})
+                <div class="col-md-10">
+                    @Html.DropDownListFor(x => x.CategoryId, (IEnumerable<SelectListItem>) this.ViewBag.Categories, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(m => m.CategoryId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Add bookmark"/>
+        }
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}
